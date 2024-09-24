@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #F1F0FC;;
+}
+.active{
+    border-bottom: 2px solid #454FB1;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 25%;
+    background-color: #454FB1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: #2f9b88;
+}
+.poster img{
+height: 90vh;
+margin-left: 40px;
+}
+
+
+/* testimonial */
+.testimonial_heading {
+    text-align: center;
+    background-color: #f1f0fc;
+}
+
+.Testimonial_content {
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.testimonial {
+    display: flex;
+}
+
+.Testimonial_content:hover {
+    background-color: #b9b6dc;
+    transform: translateY(-15px);
+}
+
+/*  */
+.web_app {
+    margin-top: 50px;
+    background-color: #3f47a9;
+    color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.web_app h4 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+.app_img {
+    /* border: 2px solid red; */
+    align-content: center;
+}
+.footer-brand,
+.footer-brand:hover {
+    color: #111;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+.footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.foot_step ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.foot_step ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.foot_step ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.foot__note p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot_step ul {
+        text-align: center;
+        width: 100%;
+    }
+
+    .foot_step ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .foot__note {
+        text-align: center;
+        width: 100%;
+        margin-top:20px;
+    }
+}
+@media (max-width: 500px){
+    .app_img{
+        display: grid;
+        gap:1rem;
+        justify-items:center;
+    }
+}
